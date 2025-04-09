@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Inventory Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="image">
+                <img src="supplier_18582894.png" width="50px" height="50px">
+            <div class="title">
+                <h1><b>Inventory Management System</b></h1>
+            </div>
+        </div>
+    </div>
+    <div class="sorting">
+        <ul>
+            <li>
+                <div class="search">
+                    <p><b>Search: </b><input class="srch" id="itemSearch" type="text" placeholder="Search Item"><button class="btn">Search</button></p>                   
+                </div>
+            </li>
+            <li>
+                <div class="itemtype">
+                    <p><b>Item Type: </b><input class="item" id="typeSearch" type="text" placeholder="Specify Item"><button class="btn">Search</button></p>                    
+                </div>
+            </li>
+            <li>
+                <div class="dropdown">
+                    <button class="dropbtn"><b>Price ⮟ </b></button>
+                    <div class="dropdown-content">
+                        <input type="radio" id="Ascending" name="radioGroup" value="Ascending">
+                        <label for="Ascending"><b> ↑ </b>Ascending</label><br>
+                        <input type="radio" id="Descending" name="radioGroup" value="Descending">
+                        <label for="Descending"><b> ↓ </b>Descending</label><br>
+                        
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="dropdown">
+                    <button class="dropbtn"><b>Quantity ⮟ </b></button>
+                    <div class="dropdown-content">
+                        <input type="radio" id="MItems" name="radioGroup1" value="MItems">
+                        <label for="MItems"><b> ↑ </b>More Items</label><br>
+                        <input type="radio" id="LItems" name="radioGroup1" value="LItems">
+                        <label for="LItems"><b> ↓ </b>Less Items</label><br>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <button class="btn" onclick="resetSorting()" style="margin-left: 20px;">Reset Sorting</button>
+            </li>
+        </ul>
+    </div>
+    <div class="table" id="list">
+            <table id="data">
+                <thead>
+                    <tr>
+                        <th style="width: 12%;">Image</th>
+                        <th style="width: 12%;">Product Name</th>
+                        <th style="width: 12%;">Item Type</th>
+                        <th style="width: 21%;">Details</th>
+                        <th style="width: 12%;">Quantity</th>
+                        <th style="width: 12%;">Price</th>
+                        <th style="width: 12%;">Date Added</th>
+                        <th style="width: 12%;">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+    </div>
+
+    <button class="addItem" onclick="openForm()">+ Add Item</button> 
+    <div class="form-popup" id="myForm">
+        <form class="form-container" id="tForm">
+
+            <label for="file"><b>Image: </b></label>
+            <input type="file" id="file" name="filename">
+
+            <label for="name"><b>Name: </b></label>
+            <input type="text" id="name" placeholder="Enter Item Name" name="name" required>
+
+            <label for="type"><b>Type: </b></label>
+            <input type="text" id="type" placeholder="Enter Item Type" name="type" required>
+
+            <label for="details"><b>Details: </b></label>
+            <textarea id="details" placeholder="Enter Item Details" name="details" rows="3" cols="40" required></textarea>
+
+            <label for="quantity"><b>Quantity: </b></label>
+            <input type="number" id="quantity" placeholder="Enter Item Quantity" name="quantity" min="0" required>
+
+            <label for="price"><b>Price: </b></label>
+            <input type="number" id="price" placeholder="Enter Item Price" name="price" min="0" required>
+
+            <label for="date"><b>Date: </b></label>
+            <input type="date" id="date" placeholder="Enter Date" name="date" required>
+
+            <button type="submit" class="bttn">Add</button>
+            <button type="button" class="btncancel" onclick="closeForm()">Cancel</button>
+        </form>
+    </div>
+<script src="function.js"></script>
+</body>
+</html>

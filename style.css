@@ -1,0 +1,215 @@
+* {
+    padding: 0;
+    margin:0;
+}
+.image {
+    display: flex;
+    margin: 0;
+    padding: 15px;
+    background-color: rgb(127, 197, 255);
+}
+.title {
+    font-family: sans-serif;
+    color: white;
+    height: 40px;
+    margin-left: 10px;
+    padding: 10px;
+}
+.search input[type=text] {
+    padding: 5px;
+    border-color: rgb(127, 197, 255);
+    border-radius: 5px;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+}
+.search button:hover {
+    background-color: rgb(165, 165, 165);
+}   
+.search {
+    font-family: sans-serif;
+}
+
+/* dropdown button */
+.item {
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 8px;
+    margin-right: 8px;
+    font-size: 17px;
+    border-color: rgb(127, 197, 255);
+}
+.btn {
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 8px;
+    margin-right: 8px;
+    font-size: 17px;
+    transition: all 0.3s ease;
+}
+.btn:hover {
+    background-color: rgb(165, 165, 165);
+    transform: scale(1.05);
+}
+.itemtype p{
+    font-family: sans-serif;
+}
+.itemtype {
+    width: 420px;
+}
+.dropbtn {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 13px;
+    font-size: 17px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-color: rgb(127, 197, 255);
+    width: 180px;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content {
+    color: rgb(0, 0, 0);
+    padding: 13px;
+    font-size: 16px;
+    font-family: sans-serif;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border-color: rgb(127, 197, 255);
+    width: 154px;
+    display: none;
+    position: absolute;
+    background-color:rgba(127, 197, 255, 0.13);
+    z-index: 1;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+.sorting {
+    display: block;
+    height: 100px;
+    padding: 15px;
+    margin: 0 6%;
+    width: 90%;
+}
+ul {
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ul li {
+    list-style: none;
+    margin-left: 50px;
+}
+.table {
+    margin: 0 8%;
+}
+table {
+    width: 100%;
+}
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    font-family: sans-serif;
+    text-align: center;
+}
+td{
+    padding: 15px;
+    font-size: 18px;
+    border: 1px solid black;
+}
+th{
+    color: white;
+    padding: 20px;
+    font-size: 18px;
+    background-color: rgb(127, 197, 255);
+}
+.addItem {
+    margin: 0 8%;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+/* create modal form */
+.addItem {
+    background-color: #555;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+    bottom: 23px;
+    right: 28px;
+    width: 150px;
+}
+.form-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 3px solid #f1f1f1;
+    z-index: 9;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.form-container {
+    max-width: 500px;
+    padding: 10px;
+    background-color: white;
+    font-family: sans-serif;
+}
+.form-container input[type=text], .form-container input[type=date], .form-container input[type=file], .form-container input[type=number], textarea {
+    width: 94%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+}
+.form-container input[type=text]:focus, .form-container input[type=date]:focus, .form-container input[type=file]:focus, .form-container input[type=number]:focus, textarea:focus {
+    background-color: #ddd;
+    outline: none;
+}
+.form-container .bttn {
+    background-color: rgb(127, 197, 255);
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom:5px;
+    opacity: 0.8;
+    font-size: 15px;
+}
+.form-container .btncancel {
+    background-color: rgb(255, 109, 109);
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom:5px;
+    opacity: 0.8;
+    font-size: 15px;
+}
+.bttn:hover, .addItem:hover, .btncancel:hover {
+    opacity: 1;
+}
+textarea {
+    resize: none;
+}
+
+@media only screen and (max-width: 620px) {
+    .image, .title, .search, .item, .addItem, .form-container, .form-popup {
+      width: 100%;
+    }
+}
